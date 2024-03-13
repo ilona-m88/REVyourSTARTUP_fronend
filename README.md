@@ -1,3 +1,5 @@
+Creat in root of the project .env file 
+REACT_APP_API_URL=http://127.0.0.1:8000
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
