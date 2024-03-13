@@ -1,29 +1,34 @@
-import './App.css';
-import Form from "./Form"
-import React, { useState, useEffect } from 'react';
-
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate, Link } from 'react-router-dom';
+import LoginForm from './LoginForm';
+import Dashboard from './Dashboard';
+import Form from './Registration'; // Import the Form component
+import Header from './Header'
 function App() {
-  const [message, setMessage] = useState('');
-  const homeEndpoint = process.env.REACT_APP_HOME_ENDPOINT;
-  useEffect(() => {
-    async function fetchHomePage() {
-      try {
-        const response = await fetch(homeEndpoint);
-        const data = await response.json();
-        setMessage(data.Message); // Extracting the message from the response
-      } catch (error) {
-        console.error('Error fetching homepage:', error);
-      }
-    }
+  const [loggedIn, setLoggedIn] = useState(false);
 
-    fetchHomePage();
-  }, []);
+  const handleLogin = () => {
+    // Perform login logic, set loggedIn to true upon successful login
+    setLoggedIn(true);
+  };
 
   return (
-    <div className='App'>
-      <h1>Home Page</h1>
-      <p>{message}</p>
-      <Form />
+    <div>
+    <Header />
+    <Router>
+      <Routes>
+        <Route path="/" element={loggedIn ? <Navigate to="/dashboard" /> : <LoginForm isLoggedIn={handleLogin} />} />
+        <Route path="/dashboard" element={loggedIn ? <Dashboard /> : <Navigate to="/" />} />
+        {/* Route for registration */}
+        <Route path="/register" element={<Form />} />
+      </Routes>
+      {/* Button to redirect to registration (only shown when not logged in) */}
+      {!loggedIn && (
+        <Link to="/register">
+          <button>Register</button>
+        </Link>
+      )}
+    </Router>
     </div>
   );
 }
