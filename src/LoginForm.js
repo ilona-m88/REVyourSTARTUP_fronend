@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 function LoginForm({ isLoggedIn }) {
   const [username, setUsername] = useState('');
@@ -35,6 +36,10 @@ function LoginForm({ isLoggedIn }) {
         <button type="submit">Login</button>
       </form>
       {error && <p>{error}</p>}
+      {/* Display registration button */}
+      <Link to="/register">
+        <button>Register</button>
+      </Link>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import axios from 'axios';
 
 export default function Form() {
@@ -55,6 +56,9 @@ export default function Form() {
 
         <button className="btn" type="submit">Submit</button>
       </form>
+      <Link to="/">
+        <button>Back to Login</button>
+      </Link>
     </div>
   );
 }
