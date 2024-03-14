@@ -4,18 +4,26 @@
   }
   
   .label{
-  display: block;
-  font-size: larger;
-  color: white;
-  padding: 5px;
+    display: inline-block;
+    width: 80px; 
   }
   
   .input{
-  font-size: larger;
-  padding: 5px;
-  margin: 2px;
-  
+    font-size: larger;
+    padding: 5px;
+    margin: 2px;  
   }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .container {
+    width: 300px; /* Adjust width as needed */
+    margin: 0 auto;
+  }
+  
   .btn{
   color: white;
   background-color: red;

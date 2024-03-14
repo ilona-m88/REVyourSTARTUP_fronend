@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { login } from './api';
 
 function LoginForm({ isLoggedIn }) {
   const [username, setUsername] = useState('');
@@ -9,15 +10,15 @@ function LoginForm({ isLoggedIn }) {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      // Perform login logic here
-      // For simplicity, let's assume login is successful if both username and password are provided
-      if (username && password) {
+      const response = await login(username, password);
+
+      if (response.status === 202) {
         isLoggedIn(true); // Set loggedIn to true upon successful login
       } else {
         setError('Invalid username or password');
       }
     } catch (error) {
-      setError('Invalid username or password');
+        setError("Unable to authenticate user");
     }
   };
 
@@ -35,11 +36,10 @@ function LoginForm({ isLoggedIn }) {
         </div>
         <button type="submit">Login</button>
       </form>
-      {error && <p>{error}</p>}
-      {/* Display registration button */}
       <Link to="/register">
         <button>Register</button>
       </Link>
+      {error && <p>{error}</p>}
     </div>
   );
 }
