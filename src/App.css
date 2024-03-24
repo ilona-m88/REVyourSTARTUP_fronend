@@ -10,6 +10,7 @@
 
   .form{
     color: navy;
+    text-align: center;
   }
   
   .label{
@@ -57,31 +58,3 @@
   height: 50px;
   padding: 5px;
   }
-
-  /* Full-page container */
-.full-page-container {
-  display: flex;
-  justify-content: center; /* Centers children horizontally */
-  align-items: center; /* Centers children vertically */
-  background-color: navy; /* Your container's background color */
-}
-
-/* Circle container */
-.circle-container {
-  width: 500px; /* Width of the circle */
-  height: 500px; /* Height of the circle, should be the same as width for a perfect circle */
-  background-color: lightgray; /* Circle color */
-  border-radius: 50%; /* Makes it a circle */
-  display: flex;
-  justify-content: center; /* Centers text horizontally inside the circle */
-  align-items: center; /* Centers text vertically inside the circle */
-  color: white; /* Text color */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), /* Shadow effect */
-  0 0 20px rgba(0, 0, 0, 0.3) inset; /* Inset shadow for depth */
-
-/* Adding a light border can also give the effect of the element coming out of the screen */
-border: 2px solid #ffffff; /* Light border for the popping effect */
-
-/* Gradient background to simulate lighting which can add to the 3D effect */
-background: radial-gradient(circle at center, #f0f0f0 0%, #d4d4d4 80%, #bababa 100%);
-}
