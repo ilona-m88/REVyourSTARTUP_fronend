@@ -103,11 +103,11 @@ const FinancialTable = () => {
               <td>{item.name}</td>
               <td><tr>{item.status}</tr>
               <tr>Number of Customers @ </tr>{item.inputData.deposit}
-              <tr>Deposit % </tr>{item.inputData.deposit}
-              <tr>Delievered in X months </tr>{item.inputData.deposit}
-              <tr># of extra months to pay </tr>{item.inputData.deposit}
-              <tr>Commission as % of income </tr>{item.inputData.deposit}
-              <tr>Fixed Fees/Customer </tr>{item.inputData.deposit}</td>
+              <tr>Deposit % </tr><input></input>
+              <tr>Delievered in X months </tr><input></input>
+              <tr># of extra months to pay </tr><input></input>
+              <tr>Commission as % of income </tr><input></input>
+              <tr>Fixed Fees/Customer </tr><input></input></td>
               <td>{months.map(month => <tr key={month}>{item.monthlyData[month] || '-'}</tr>)}</td>
               <td>{months.map(month => <tr key={month}>{item.monthlyData[month] || '-'}</tr>)}</td>
               <td>{months.map(month => <tr key={month}>{item.monthlyData[month] || '-'}</tr>)}</td>
@@ -137,8 +137,8 @@ const FinancialTable = () => {
         <tbody>
           {data.sources.map(source => (
             <tr>
-              <td>{source.sourceName}</td>
-              {months.map(month => <td key={month}>{source.monthlyData[month] || '-'}</td>)}
+              <td>{source.sourceName}<input></input></td>
+              {months.map(month => <td key={month}>{source.monthlyData[month] || '-'}<input></input></td>)}
             </tr>
           ))}
         </tbody>
@@ -155,8 +155,8 @@ const FinancialTable = () => {
         <tbody>
           {data.funding_investment.map(source => (
             <tr>
-              <td>{source.sourceName}</td>
-              {months.map(month => <td key={month}>{source.monthlyData[month] || '-'}</td>)}
+              <td>{source.sourceName}<input></input></td>
+              {months.map(month => <td key={month}>{source.monthlyData[month] || '-'}<input></input></td>)}
             </tr>
           ))}
         </tbody>
