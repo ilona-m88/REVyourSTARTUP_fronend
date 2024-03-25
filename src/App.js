@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-do
 import LoginForm from './LoginForm';
 import Dashboard from './Dashboard';
 import Form from './Registration'; // Import the Form component
+import Year1 from './Year1';
 import Header from './Header'
 import './App.css';
 
@@ -19,7 +20,7 @@ function App() {
     <Header />
     <Router>
       <Routes>
-        <Route path="/" element={loggedIn ? <Navigate to="/dashboard" /> : <LoginForm isLoggedIn={handleLogin} />} />
+        <Route path="/" element={loggedIn ? <Navigate to="/dashboard" /> : <Year1 isLoggedIn={handleLogin} />} />
         <Route path="/dashboard" element={loggedIn ? <Dashboard setLoggedIn={setLoggedIn} /> : <Navigate to="/" />} />
         {/* Route for registration */}
         <Route path="/register" element={<Form />} />

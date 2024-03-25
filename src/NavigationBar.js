@@ -1,15 +1,16 @@
 import React from 'react';
-import './navbar.css'; 
+import './navbar.css';
+import FinancialTable from './Year1';
 function NavigationBar({ setActiveTab }) {
   return (
     <div className="navbar">
       <ul className="navbar-list">
-        <li onClick={() => setActiveTab('form1')}>Form 1</li>
-        <li onClick={() => setActiveTab('form2')}>Form 2</li>
-        <li onClick={() => setActiveTab('form3')}>Form 3</li>
-        <li onClick={() => setActiveTab('form4')}>Form 4</li>
-        <li onClick={() => setActiveTab('form5')}>Form 5</li>
-        <li onClick={() => setActiveTab('form6')}>Form 6</li>
+        <li onClick={() => setActiveTab('form1')}>Rev Valuation</li>
+        <li onClick={() => setActiveTab('form2')}>Pro Forma</li>
+        <li onClick={() => setActiveTab('form3')}>Depreciation</li>
+        <li onClick={() => setActiveTab('form4')}>Year 1</li>
+        <li onClick={() => setActiveTab('form5')}>Year 2</li>
+        <li onClick={() => setActiveTab('form6')}>Year 3</li>
       </ul>
     </div>
   );
