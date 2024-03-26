@@ -1,10 +1,11 @@
 import './App.css';
-import Form from "./Form"
+//import './pages/styling/proforma.css'
+import ProForma from './pages/proForma';
 
 function App() {
 return (
 <div className="App">
-<Form />
+<ProForma />
 </div>
 
 );
