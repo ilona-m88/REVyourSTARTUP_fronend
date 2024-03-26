@@ -1,12 +1,19 @@
-// App.js
 import React from 'react';
-import LandingPage from './pages/LandingPage.js'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+import ReverseEvaluation from './pages/ReverseEvaluation';
+
 
 function App() {
   return (
-    <div className="App">
-      <LandingPage />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/home" element={<LandingPage />} />
+          <Route path="/ReverseEvaluation" element={<ReverseEvaluation />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

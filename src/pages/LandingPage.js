@@ -20,10 +20,6 @@ const LandingPage = () => {
             <button className="get-started">Get Started</button>
             <button className="about-us">About Us</button>
           </div>
-          {/* You'll need to add the image here */}
-          <div className="image-container">
-            {/* Image goes here */}
-          </div>
         </header>
       </div>
     );
