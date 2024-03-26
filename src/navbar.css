@@ -1,17 +1,26 @@
-.navbar {
-    display: flex;
+  .navbar {
+    display: block;
     justify-content: space-between;
+    width: 100%;
+   
   }
   
   .navbar-list {
     display: flex;
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 0;    
   }
-  
+  .header {
+    text-align: center;
+    background-color: blue;
+    color: white;
+  }
   .navbar-list li {
+    flex: 1;
     padding: 10px;
     cursor: pointer;
     border: 2px solid black;
+    text-align: center;
+    
   }

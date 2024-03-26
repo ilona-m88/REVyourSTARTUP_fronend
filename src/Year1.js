@@ -1,5 +1,5 @@
 import React from 'react';
-import './Year1.css'
+import './Year1.css';
 import Dashboard from './Dashboard';
 // Example data structure
 const data = {
@@ -82,9 +82,9 @@ const data = {
 //{months.map(month => <tr key={month}>{item.monthlyData[month] || '-'}</tr>)}
 const months = ['Jan-23', 'Feb-23', 'Mar-23', 'Apr-23', 'May-23', 'Jun-23', 'Jul-23', 'Aug-23', 'Sep-23', 'Oct-23', 'Nov-23', 'Dec-23'];
 
-const FinancialTable = () => {
+const Year1 = () => {
   return (
-    <div>
+    <div class="year1">
       <Dashboard></Dashboard>
       <h2>Year 1 Income Overview</h2>
 
@@ -137,8 +137,8 @@ const FinancialTable = () => {
         <tbody>
           {data.sources.map(source => (
             <tr>
-              <td>{source.sourceName}<input></input></td>
-              {months.map(month => <td key={month}>{source.monthlyData[month] || '-'}<input></input></td>)}
+              <td><input></input></td>
+              {months.map(month => <td key={month}>{source.monthlyData[month]}<input></input></td>)}
             </tr>
           ))}
         </tbody>
@@ -187,7 +187,7 @@ const FinancialTable = () => {
         <tbody>
           {data.totalAllMonths.map(source => (
             <tr>
-              <td>Yes</td>
+              <td><button>Yes</button> <button>No  </button></td>
               {months.map(month => <td key={month}>{source.amount || '-'}</td>)}
             </tr>
           ))}
@@ -206,7 +206,7 @@ const FinancialTable = () => {
         <tbody>
           {data.totalAllMonths.map(source => (
             <tr>
-              <td>Yes</td>
+              <td><button>Yes</button>  <button>No </button></td>
               <td>25000</td>
               {months.map(month => <td key={month}>{source.amount || '-'}</td>)}
             </tr>
@@ -552,4 +552,4 @@ const FinancialTable = () => {
   );
 };
 
-export default FinancialTable;
+export default Year1;

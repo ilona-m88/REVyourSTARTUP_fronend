@@ -1,18 +1,21 @@
 import React from 'react';
 import './navbar.css';
-import FinancialTable from './Year1';
-function NavigationBar({ setActiveTab }) {
+
+import { Link } from 'react-router-dom';
+
+function NavigationBar() {
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <ul className="navbar-list">
-        <li onClick={() => setActiveTab('form1')}>Rev Valuation</li>
-        <li onClick={() => setActiveTab('form2')}>Pro Forma</li>
-        <li onClick={() => setActiveTab('form3')}>Depreciation</li>
-        <li onClick={() => setActiveTab('form4')}>Year 1</li>
-        <li onClick={() => setActiveTab('form5')}>Year 2</li>
-        <li onClick={() => setActiveTab('form6')}>Year 3</li>
+        <li><Link to="/revForm">Rev Form</Link></li>
+        <li><Link to="/proForma">Pro Forma</Link></li>
+        <li><Link to="/year1">Year 1 form</Link></li>
+        <li><Link to="/depreciation">Depreciation form</Link></li>
+        <li><Link to="/year2">Year 2 form</Link></li>
+        <li><Link to="/year3">Year 3 form</Link></li>
+        {/* Add more links as needed */}
       </ul>
-    </div>
+    </nav>
   );
 }
 

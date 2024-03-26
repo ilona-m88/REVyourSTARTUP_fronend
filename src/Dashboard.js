@@ -2,15 +2,12 @@ import React from 'react';
 import NavigationBar from './NavigationBar';
 
 
-function Dashboard({ setLoggedIn }) {
-  const handleLogout = () => {
-    setLoggedIn(false);
-  }
+function Dashboard() {
+ 
 
   return (
     <div className="dashboard">
       <NavigationBar />
-      <button onClick={handleLogout}>Logout</button>
     </div>
     
   );

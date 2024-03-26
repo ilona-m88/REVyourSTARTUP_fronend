@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './navbar.css';
 function Header() {
   return (
     <div className="header">
