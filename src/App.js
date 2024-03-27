@@ -12,7 +12,7 @@ function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<RegistrationForm />} />
         {/* Redirect from base URL to /register */}
-        <Route path="/" element={<Navigate replace to="/register" />} />
+        <Route path="/" element={<Navigate replace to="/login" />} />
       </Routes>
     </Router>
   );
