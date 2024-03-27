@@ -1,5 +1,5 @@
 import './App.css';
-//import './pages/styling/proforma.css'
+import './pages/styling/proforma.css'
 import ProForma from './pages/proForma';
 
 function App() {
