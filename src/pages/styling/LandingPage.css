@@ -1,0 +1,74 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: hsl(219, 48%, 32%);
+    overflow-x: hidden; 
+  }
+  
+  .landing-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .nav-links a {
+    margin-right: 1rem;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-links .get-started {
+    padding: 0.5rem 1rem;
+    background-color: transparent; 
+    border: 2px solid #6a99c6;
+    border-radius: 15px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .header-content {
+    text-align: left;
+    padding-top: 15rem;
+    padding-left: 5rem;
+  }
+  
+  .header-content .buttons {
+    margin-top: 2rem;
+  }
+  
+  .header-content .get-started,
+  .header-content .about-us {
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  .header-content .get-started {
+    background-color: #6a99c6; 
+    color: #fff;
+  }
+  
+  .header-content .about-us {
+    background-color: transparent;
+    color: #fff;
+  }
+  
+  
